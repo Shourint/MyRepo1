@@ -1,4 +1,3 @@
-
 <?php
 if(isset($_POST['title'])){
     echo"タイトルはあります！";
@@ -10,16 +9,15 @@ if(isset($_POST['title'])){
         //繋がってるときはこんな表示したくないのでコメントアウト
         echo "データベースに繋がっています";
     } else {
-        "データベースに繋がってないでござる";
+        echo "データベースに繋がってないでござる";
     }
-    echo $_POST['title'];
-    // $_regist = $pdo->prepare("INSERT INTO test(title) VALUES (?)");
-    // ぶち込みのルールを決めます(?)
-    // データベースのそれぞれの引き出しに
-    //上で定義した変数の値をぶち込みます
-    //bindParamよくわかってないから後で調べます
-    // $regist->bindParam("title", $_title);
-    // $regist->execute(array($_title));
+    // echo $_POST['title'];
+    $sql = "INSERT INTO
+        yasai_item
+        (name, price)
+        VALUES
+        ('ナス', 70)";
+$sth = $pdo -> query($sql);
 }
 
 if ($regist) {
