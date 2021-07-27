@@ -7,6 +7,10 @@
         text-align: center;
     }
 
+    body {
+        background-color: #99CCFF;
+    }
+
     .button-area {
         display: block;
         /* ブロック化  */
@@ -41,7 +45,7 @@
         /* なめらか変化 */
         box-shadow: 3px 3px 7px #666666;
         /* 影の設定 */
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .menu-button a {

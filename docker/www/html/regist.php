@@ -6,11 +6,17 @@
     <style>
     h1 {
         text-align: center;
+        margin: 40px auto;
         font-size: 24px;
     }
 
-    div {
-        margin: 20px 10px;
+    body {
+        background-color: #99CCFF;
+    }
+
+    .input {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     label {
@@ -20,21 +26,13 @@
     input,
     textarea {
         margin: 0px 10px;
+        width: 70%;
     }
 
-    textarea {
-        width: 80%;
-    }
-
-    input[type="submit"] {
-        margin: 20px;
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-    }
-
-    #title {
-        width: 80%;
+    input[type="button"],
+    [type="submit"] {
+        height: 30px;
+        width: 60px;
     }
     </style>
 </head>
@@ -46,22 +44,22 @@
             <label for="name">投稿者名</label>
             <input type="text" id="name" name="name" />
         </div> -->
-        <div>
+        <div class="input">
             <label for="title">タイトル</label>
             <input type="text" id="title" name="title" />
         </div>
-        <!-- <div>
+        <div class="input">
             <label for="contents">コンテンツ</label>
             <textarea id="contents" name="contents" rows="5" cols="5"></textarea>
-        </div> -->
-        <input type="submit" value="確認" />
+        </div>
+        <div class="" style="text-align: center">
+            <input type="submit" value="登録" />
+        </div>
     </form>
-    <!-- <div class="" style="text-align: center">
-        <input type="button" onclick="location.href='./index.php'" value="ホーム画面">
-    </div>
     <div class="" style="text-align: center">
+        <input type="button" onclick="location.href='./index.php'" value="HOME">
         <input type="button" onclick="location.href='./view.php'" value="閲覧">
-    </div> -->
+    </div>
 </body>
 
 </html>

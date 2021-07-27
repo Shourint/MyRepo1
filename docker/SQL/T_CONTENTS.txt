@@ -1,6 +1,16 @@
+select * from T_CONTENTS;
+
+truncate table T_CONTENTS;
+
+show columns from T_CONTENTS;
+
+
+drop table T_CONTENTS;
 CREATE TABLE T_CONTENTS (
      contents_id int NOT NULL AUTO_INCREMENT,
-     title VARCHAR(64) NOT NULL,
-     contents VARCHAR(255) NOT NULL,
+     title VARCHAR(64),
+     contents VARCHAR(255),
+     insert_date datetime,
+     update_date datetime,
      PRIMARY KEY (contents_id)
 );
