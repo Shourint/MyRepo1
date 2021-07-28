@@ -4,9 +4,11 @@
 <head>
     <title>登録完了</title>
     <style>
-    h1 {
+    .main {
+        margin-top:10%;
         text-align: center;
-        font-size: 24px;
+        font-size: 27px;
+        font-weight: bold;
     }
 
     body {
@@ -16,7 +18,7 @@
     .button-area {
         display: block;
         /* ブロック化  */
-        margin: 0 auto;
+        margin: 7% auto;
         /* 中央揃え */
     }
 
@@ -68,7 +70,9 @@
 </head>
 
 <body>
-    <h1>記事の登録が完了しました。</h1>
+    <div class="main">
+        記事の登録が完了しました。
+    </div>
     <div class="index-warpper">
         <div class="button-area">
             <div class="menu-button">
