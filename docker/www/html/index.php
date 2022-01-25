@@ -73,7 +73,7 @@ session_start();
         <form action="register.php" method="post" class="form_log">
             <input type="email" name="email" class="textbox un" placeholder="メールアドレス"><br>
             <input type="password" name="password" class="textbox pass" placeholder="パスワード"><br>
-            <input type="check_password" name="check_password" class="textbox pass" placeholder="パスワードの確認"><br>
+            <input type="password" name="check_password" class="textbox pass" placeholder="パスワードの確認"><br>
 
             <button type="submit" class="log_button">新規登録する</button>
             <p style="text-align:center;margin-top: 1.5em;">※パスワードは半角英数字をそれぞれ１文字以上含んだ、８文字以上で設定してください。</p>
@@ -81,7 +81,6 @@ session_start();
     </div>
     <div class="border">
     <h1 class="login">ログインはこちら</h1>
-        <!-- <form action="topmenu.php" method="post" class="form_log"> -->
         <form action="login.php" method="post" class="form_log">
             <input type="email" name="email" class="textbox un" placeholder="メールアドレス"><br>
             <input type="password" name="password" class="textbox pass" placeholder="パスワード"><br>

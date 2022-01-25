@@ -3,11 +3,14 @@
 session_start();
 //メールアドレスのバリデーション
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-  echo '入力された値が不正です。';
+    ?>
+    <script>
+        window.alert('入力された値が不正です。');
+        history.go(-1);
+    </script>
+    <?php
   return false;
 }
-if ($_POST['password'] == $_POST['check_password']){
-
 
 //DB内でPOSTされたメールアドレスを検索
 try {
@@ -22,7 +25,12 @@ try {
     }
 //emailの存在確認
 if (!isset($row['email'])) {
-  echo '入力されたメールアドレスは登録されておりません。';
+    ?>
+    <script>
+        window.alert('入力されたメールアドレスは登録されておりません。');
+        history.go(-1);
+    </script>
+    <?php
   return false;
 }
 //パスワード確認後sessionにメールアドレスを渡す
@@ -31,12 +39,11 @@ if (password_verify($_POST['password'], $row['password'])) {
   $_SESSION['EMAIL'] = $row['email'];
   header('Location: ./topmenu.php');
 } else {
-    ?>
+?>
 <script>
-window.alert('メールアドレス又はパスワードが間違っています。');
-history.go(-1);
+    window.alert('メールアドレス又はパスワードが間違っています。');
+    history.go(-1);
 </script>
 <?php
   return false;
-}
 }
