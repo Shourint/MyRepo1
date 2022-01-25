@@ -1,24 +1,26 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <style>
-    h1 {
-        text-align: center;
+    h1{
+        text-align:center;
+        margin-top:2em;
+        margin-bottom: 1em;
+    }
+
+    form{
+        text-align:center;
     }
 
     body {
         background-color: #99CCFF;
     }
 
-    .button-area {
-        display: block;
-        /* ブロック化  */
-        margin: 0 auto;
-        /* 中央揃え */
-    }
-
-    .menu-button {
+    button {
         display: block;
         /* 縦並び  */
         text-align: center;
@@ -48,36 +50,44 @@
         margin: 10px auto;
     }
 
-    .menu-button a {
-        color: #fff;
-        /* 文字色     */
-        text-decoration: none;
-        /* 下線なし   */
-    }
-
-    .menu-button:hover {
+    button:hover {
         box-shadow: none;
         /* カーソル時の影消去 */
         opacity: 1;
         /* カーソル時透明度 */
     }
+
+    .border{
+        background-color: #FFFF;
+        border:solid 10px blue;
+        border-radius: 6em;
+        margin: 2em 10em ;
+    }
+
     </style>
 </head>
 
 <body>
-    <div class="index-warpper">
-        <h1>掲示板サイト</h1>
-        <div class="button-area">
-            <div class="menu-button">
-                <a href="./regist.php">投稿</a>
-            </div>
-            <div class="menu-button">
-                <a href="./view.php">記事閲覧</a>
-            </div>
-        </div>
+    <div class="border">
+    <h1 class="register">初めての方はこちら</h1>
+        <form action="register.php" method="post" class="form_log">
+            <input type="email" name="email" class="textbox un" placeholder="メールアドレス"><br>
+            <input type="password" name="password" class="textbox pass" placeholder="パスワード"><br>
+            <input type="check_password" name="check_password" class="textbox pass" placeholder="パスワードの確認"><br>
+
+            <button type="submit" class="log_button">新規登録する</button>
+            <p style="text-align:center;margin-top: 1.5em;">※パスワードは半角英数字をそれぞれ１文字以上含んだ、８文字以上で設定してください。</p>
+        </form>
     </div>
-
-</body>
-
+    <div class="border">
+    <h1 class="login">ログインはこちら</h1>
+        <!-- <form action="topmenu.php" method="post" class="form_log"> -->
+        <form action="login.php" method="post" class="form_log">
+            <input type="email" name="email" class="textbox un" placeholder="メールアドレス"><br>
+            <input type="password" name="password" class="textbox pass" placeholder="パスワード"><br>
+            <button type="submit" class="log_button">ログインする</button>
+        </form>
+    </div>
+    </body>
 
 </html>

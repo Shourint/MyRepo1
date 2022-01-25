@@ -49,16 +49,8 @@
 </head>
 
 <body>
-    レコード件数：<?php echo $row_count; ?>
+    <!-- レコード件数：<?php echo $row_count; ?> -->
     <table border='1'>
-        <tr>
-            <td>id</td>
-            <td>title</td>
-            <td>contents</td>
-            <td>insert_date</td>
-            <td>update_date</td>
-        </tr>
-
         <?php 
 foreach($rows as $row){
 ?>
@@ -73,13 +65,6 @@ foreach($rows as $row){
                 <?php echo $row['contents']; ?>
             </div>
         </div>
-        <tr>
-            <td><?php echo $row['contents_id']; ?></td>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['contents']; ?></td>
-            <td><?php echo $row['insert_date']; ?></td>
-            <td><?php echo $row['update_date']; ?></td>
-        </tr>
         <?php 
 } 
 ?>
